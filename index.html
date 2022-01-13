@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Wlecome to the travel webpage!</title>
+    <title>Welcome to my travel webpage!</title>
     <style>
         body {
             background-image: url('https://youmatter.world/app/uploads/sites/2/2019/11/travel-world.jpg');
@@ -9,9 +9,23 @@
             background-attachment: fixed;
             background-size: cover;
         }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        #starting-text {
+            font-size: 2em;
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-
+    <p id="starting-text" class="container"><a href=".\menu\Cities Selection.html">Click here to open the menu :D</a></p>
 </body>
 </html>
