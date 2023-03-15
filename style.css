@@ -17,6 +17,6 @@ body {
     transition: .125s;
 }
 .aboutme:hover, .code:hover {
-    background-color: #e9d8e449;
+    background-color: #00000049;
     cursor: pointer;
 }
