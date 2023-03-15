@@ -1,0 +1,22 @@
+body {
+    background-color: #e9d8e4;
+    text-align: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .oof { */
+    /* margin-top: 5px; */
+/* } */
+.things {
+    border-bottom: 1px solid black;
+}
+.aboutme, .code {
+    display: inline-block;
+    width: 49%;
+    transition: .125s;
+}
+.aboutme:hover, .code:hover {
+    background-color: #e9d8e449;
+    cursor: pointer;
+}
