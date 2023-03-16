@@ -1,5 +1,5 @@
 body {
-    background-color: #e9d8e4;
+    background-color: #FFA3FD;
     text-align: center;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -11,12 +11,67 @@ body {
 .things {
     border-bottom: 1px solid black;
 }
+
+@media (min-width: 769px){
+    .aboutme, .code {
+        width: 49%;
+        height: 90vh;
+    }
+    .aboutme {
+        background-image: url("./images/myPic.jpg");
+        background-repeat: no-repeat;
+        background-position-x:45%;
+        background-position-y: 75%;
+        background-blend-mode: darken;
+    }
+    .code {
+        background-image: url('./images/code.png');
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+        background-size:cover;
+    }
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 49%;
+    }
+}
+@media (max-width: 768px){
+    .aboutme, .code {
+        width: 100%;
+        height: 43vh;
+        position: relative;
+        background-color: #865DFF;
+    }
+    .aboutme:hover, .code:hover {
+        background-color: #865DFFb6;
+    }
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+    }
+}
 .aboutme, .code {
     display: inline-block;
-    width: 49%;
+    user-select: none;
     transition: .125s;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #191825;
 }
 .aboutme:hover, .code:hover {
-    background-color: #00000049;
+    background-color: #0000002b;
     cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
 }
