@@ -1,25 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="oof">Welcome To My Website</h1>
-    <div class="container">
-        <a href="/aboutMe/">
-            <div class="aboutme">
-                <h1 class="display vertical-center">About Me</h1>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Navbar</title>
+        <meta name="description" content="A website of Divjot">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/e39c68d023.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="not-links logo">
+                <a href="./" class="logo-img"><img src="./images/logo.svg" alt="logo"></a>
+                <span class="fa-solid fa-bars" id="bars">
+                    <!-- <img width="150px" src="./images/hamburger-icon.png" alt="menu" height="24px"> -->
+                </span>
             </div>
-        </a>
-        <a href="/code/">
-            <div class="code">
-                <h1 class="display vertical-center">My Code</h1>
-            </div>
-        </a>
-    </div>
-</body>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/aboutMe">About</a></li>
+                    <a href="/contact" class="cta"><button>Contact</button></a>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <h1>Sup! <span class="fa-solid fa-face-smile-beam"></span></h1>
+            <h1>Welcome to my website</h1>
+            <p>My name is Divjot. </p>
+            <p>I'm a bored 13 year old who mostly does stuff like -</p>
+            <ul>
+                <li>Coding</li>
+                <li>Gaming</li>
+                <li>Watching videos</li>
+            </ul>
+            <p>I study in the Mother's International School and I am in the 9<sup>th</sup> grade</p>
+            <p>My main areas in coding are front end web dev</p><p> I am trying to learn backend so I can do full stack developing like a cool person</p>
+            <p>I will try to put my projects(mostly on JavaScript) here.</p>
+            <p>(they are mostly not projects but some weird things that I make when they come to my mind)</p>
+            <p>if you like this website, please let me know <a href="mailto:divjot2913@outlook.com">here</a> or on my social media</p>
+            <p>I want to get into <abbr title="minet op">MINET</abbr>. Please let me in <abbr title="random number of pleases(1-20)"><strong><span id="please"></span></strong></abbr></p>
+            <p>Check my <a href="./projects/">projects</a></p>
+            <p>Check my <a href="./aboutMe">about me</a></p>
+            <p><a href="./contact/">Contact me</a></p>
+        </div>
+        <footer></footer>
+        <script>
+            let random=Math.round(Math.random()*21);
+            for(let i=0;i<random;i++){
+                document.getElementById('please').innerHTML+=' please'
+            }
+            setInterval(()=>{
+                document.getElementById('please').innerHTML=""
+                let random=Math.round(Math.random()*21);
+                for(let i=0;i<random;i++){
+                    document.getElementById('please').innerHTML+=' please'
+                }
+            },3000)
+
+            let bars = document.querySelector('#bars');
+            bars.addEventListener('click', e=>{
+                document.querySelector(".nav-links").classList.toggle("active")
+                document.querySelector("header").classList.toggle("active")
+                document.querySelector("nav").classList.toggle("active")
+            })
+        </script>
+    </body>
 </html>

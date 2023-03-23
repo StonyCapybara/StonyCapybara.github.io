@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="Colours">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/e39c68d023.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        span.fa-house {
+            color: white;
+            text-align: center;
+            display: block;
+            font-size: 20px;
+        }
+        header {
+            display: block;
+        }
+        header:hover {
+            background-color: var(--less-dark);
+            transition: 400ms;
+        }
+        
+        input[type="text"] {
+            border-radius: 10px 0 0 10px;
+            min-height: 30px;
+            min-width: 200px;
+            margin: 0;
+            padding: 0 3px;
+            border:0;
+        }
+        input[type="color"] {
+            height: 28px;
+            width: 29px;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            position: relative;
+            left: -35px;
+            top: 6px;
+            background-color: white;
+            border: 0;
+        }
+        button {
+            background-color: white;
+            border-radius: 0 10px 10px 0;
+            margin:0;
+            padding:0;
+            height: 30px;
+            width: 30px;
+            position: relative;
+            left: -39px;
+            border:0;
+            border-left: 1px solid black;
+        }
+        .container {
+            padding: 80px 100px;
+        }
+        button:hover {
+            background-color: #ffffffcc;
+        }
+    </style>
+</head>
+<body>
+    <a href="../../"><header><span class="fa-solid fa-house"></span></header></a>
+    <div class="container">
+        <div class="new-color">
+            <p>Enter a hex color:</p>
+            <input type="text" placeholder="" id="text-input">
+            <input type="color" id="color-input">
+            <button>+</button><br>
+            <p>rgb to hex:</p>
+            <input type="number" id="r" max="255" min="0" placeholder="red">
+            <input type="number" id="g" max="255" min="0" placeholder="green">
+            <input type="number" id="b" max="255" min="0" placeholder="blue">
+
+        </div>
+    </div>
+    <script>
+        let text=document.getElementById('text-input');
+        text.value='#';
+        let color=document.getElementById('color-input');
+        let arrayOfInputs = [text,color];
+        arrayOfInputs.forEach(element => {
+            element.addEventListener('input', ()=>{
+                if(element.id == "text-input"){
+                    try {
+                        color.value=text.value;
+                        console.clear()
+                    } catch (error) {}
+                }
+                else if(element.id=='color-input'){
+                    text.value=color.value;
+                }
+            })
+        });
+
+    </script>
+</body>
+</html>
