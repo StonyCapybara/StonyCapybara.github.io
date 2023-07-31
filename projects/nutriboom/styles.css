@@ -58,6 +58,18 @@ a {
     no-repeat;
   transition: 0.2s, background-size 0.2s 0.2s;
 }
+.fancy-hover {
+  color: #fff;
+  background: linear-gradient(#000 0 0) 0% calc(-3px - 100%) / var(--d, 0%) 200%
+    no-repeat;
+  transition: 0.2s, background-size 0.2s 0.2s;
+}
+.fancy-hover:hover {
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.2s, background-position 0.2s 0.2s, color 0.2s 0.2s;
+}
 .navlinks li:hover {
   --d: 100%;
   background-position: 50% 0%;
@@ -73,6 +85,8 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1.75rem 3rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 9;
 }
 /* body {
   min-height: 200vh;
@@ -143,6 +157,7 @@ h1.product-release {
   height: 42px;
   position: relative;
   top: 8px;
+  z-index: 0;
 }
 .c2 .product-title {
   color: #343a40;
