@@ -84,6 +84,7 @@ a {
 .form {
   border-radius: 35px;
   background: #343a40;
+  box-shadow: 4px 4px 4px 0px rgba(255, 255, 255, 0.25);
   display: flex;
   justify-content: center;
   align-items: flex-start;
