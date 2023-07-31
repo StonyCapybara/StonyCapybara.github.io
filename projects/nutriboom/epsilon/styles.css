@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Alfa+Slab+One&family=Archivo+Black&family=Biryani&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --light: #dee2e6;
+  --medium: #343a40;
+  --dark: #212529;
+}
+
+body {
+  background-color: var(--dark);
+  overflow: hidden;
+}
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.alfa {
+  font-family: "Alfa Slab One", cursive, sans-serif;
+}
+
+.navlogo {
+  width: 4rem;
+}
+
+.navtitle {
+  font-size: 4rem;
+  color: white;
+}
+
+.logotitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.navlinks {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+.navlinks li {
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  background: linear-gradient(#000 0 0) 0% calc(-3px - 100%) / var(--d, 0%) 200%
+    no-repeat;
+  transition: 0.2s, background-size 0.2s 0.2s;
+}
+.navlinks li:hover {
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.2s, background-position 0.2s 0.2s, color 0.2s 0.2s;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 3rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  color: #343a40;
+  font-family: Archivo Black;
+  font-size: 96px;
+}
+
+.form {
+  border-radius: 35px;
+  background: #343a40;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1.25rem 2.5rem;
+}
+.form > * {
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+.form input {
+  display: block;
+  border-radius: 4px;
+  background: #dee2e6;
+  color: #fff;
+  font-family: Advent Pro;
+  font-size: 24px;
+  padding-left: 0.5rem;
+}
+.form-title {
+  color: #fff;
+  font-family: Advent Pro;
+  font-size: 40px;
+  font-weight: 400;
+  padding-bottom: 0.75rem;
+}
+
+.content img {
+  width: 16rem;
+}
+.register {
+  padding-bottom: 2rem;
+}
+.login {
+  padding-right: 6.5rem;
+}

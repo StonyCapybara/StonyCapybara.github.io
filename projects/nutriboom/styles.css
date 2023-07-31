@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Alfa+Slab+One&family=Archivo+Black&family=Biryani&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --yellow: #d9ed92;
+  --yellow-green1: #b5e48c;
+  --yellow-green2: #99d98c;
+  --yellow-green3: #76c893;
+  --green-blue1: #52b69a;
+  --green-blue2: #34a0a4;
+  --blue1: #168aad;
+  --blue2: #1a759f;
+  --dark-blue1: #1e6091;
+  --dark-blue2: #184e77;
+}
+
+body {
+  background-color: var(--yellow);
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.alfa {
+  font-family: "Alfa Slab One", cursive, sans-serif;
+}
+
+.navlogo {
+  width: 4rem;
+}
+
+.navtitle {
+  font-size: 4rem;
+  color: white;
+}
+
+.logotitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.navlinks {
+  color: white;
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+.navlinks li {
+  font-size: 2rem;
+  padding: 0 0.5rem;
+  background: linear-gradient(#000 0 0) 0% calc(-3px - 100%) / var(--d, 0%) 200%
+    no-repeat;
+  transition: 0.2s, background-size 0.2s 0.2s;
+}
+.navlinks li:hover {
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.2s, background-position 0.2s 0.2s, color 0.2s 0.2s;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--dark-blue1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 3rem;
+}
+/* body {
+  min-height: 200vh;
+} */
+.content {
+  padding: 0 400px;
+  min-height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.content h1 {
+  margin: 0 auto;
+  font-size: 75px;
+  font-family: "Advent Pro", sans-serif;
+}
+.product {
+  border-radius: 48px;
+  padding: 1.5rem 4rem;
+  max-width: 500px;
+}
+.c1 .product {
+  background: #240046;
+}
+.product .product-title {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 3rem;
+}
+.c1 .product .product-title {
+  color: #5a189a;
+}
+
+.product-image-bg {
+  border-radius: 29px;
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.c1 .product-image-bg {
+  background: #e0aaff;
+}
+
+.product-description {
+  display: block;
+  margin: 3rem 0 1.5rem;
+  color: #fff;
+  font-family: Biryani, sans-serif;
+  font-size: 20px;
+}
+
+.wrapper {
+  scroll-snap-type: y mandatory;
+}
+.content {
+  scroll-snap-align: start;
+}
+h1.product-release {
+  color: #fff;
+  font-size: 36px;
+  text-align: right;
+}
+.c2 .product-release img {
+  width: 59px;
+  height: 42px;
+  position: relative;
+  top: 8px;
+}
+.c2 .product-title {
+  color: #343a40;
+}
+.c2 .product {
+  background-color: #212529;
+}
+
+.c2 .product-image-bg {
+  background-color: #dee2e6;
+}
